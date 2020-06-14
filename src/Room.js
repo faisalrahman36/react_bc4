@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import './Room.css';
 
 
 function Room() {
@@ -19,6 +20,7 @@ setAge(++age);
 console.log("Button clicked");
 //isLit=!isLit;  //it won't work as it doesn't change state
 setLit(!isLit);
+
 //setAge(++age);
   }
     // [isLit,setLit]=useState(true);
@@ -28,12 +30,17 @@ setLit(!isLit);
     let [isLit,setLit]= useState(true); //with destructuring new method
     //console.log("state is (faisal) : "+state);
     let [age,setAge] = useState(23);
+    // let test= '' + strvar + '' same as let test='' ${} '' 
+    
     return (
 
     
-
-   <div>
-   This is room component: Lit = {isLit ? 'lit':'dark'}.
+   //className will be used as room is JSX not HTML so class is not used. 
+   // later react will convert it into HTML property
+  //old method <div className={"room "+(isLit?"lit":"dark")} >
+  // should work but not why? new method<div className={' room ${isLit? "lit": "dark"}'} >
+  <div className={"room "+(isLit?"lit":"dark")} >
+  This is room component: Lit = {isLit ? 'lit':'dark'}.
    <br/>
    Another way to check: Lit = {JSON.stringify(isLit)}
    <br/>
