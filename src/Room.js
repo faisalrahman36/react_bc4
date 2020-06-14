@@ -30,6 +30,7 @@ setLit(!isLit);
     let [isLit,setLit]= useState(true); //with destructuring new method
     //console.log("state is (faisal) : "+state);
     let [age,setAge] = useState(23);
+    let [temp,setTemp] = useState(72);
     // let test= '' + strvar + '' same as let test='' ${} '' 
     
     return (
@@ -50,7 +51,13 @@ setLit(!isLit);
    <button onClick={increaseage}>Increase age!</button>
   
    <button onClick={()=>{setAge(++age)}}>Also Increase age!</button>
-  
+   <button onClick={()=>{setTemp(--temp)}}>- temp</button>
+   <button onClick={()=>{setTemp(++temp)}}>+ temp</button>
+   <button onClick={()=>{setLit(true)}}>ON light</button>
+   <button onClick={()=>{setLit(false)}}>OFF light</button>
+
+   Temperature= {temp}
+
    </div>
 
 
