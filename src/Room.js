@@ -40,8 +40,8 @@ setLit(!isLit);
    // later react will convert it into HTML property
   //old method <div className={"room "+(isLit?"lit":"dark")} >
   // should work but not why? new method<div className={' room ${isLit? "lit": "dark"}'} >
-  <div className={"room "+(isLit?"lit":"dark")} >
-  This is room component: Lit = {isLit ? 'lit':'dark'}.
+  <div className={`room ${isLit? "lit": "dark"}`}> 
+    This is room component: Lit = {isLit ? 'lit':'dark'}.
    <br/>
    Another way to check: Lit = {JSON.stringify(isLit)}
    <br/>
